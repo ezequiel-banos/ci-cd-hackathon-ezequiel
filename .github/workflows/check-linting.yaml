@@ -1,8 +1,8 @@
-name: check-format-with-prettier
-run-name: check-format-with-prettier
+name: check-linting-with-eslint
+run-name: check-linting-with-eslint
 on: [pull_request]
 jobs:
-  check-format-with-prettier:
+  check-linting-with-eslint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
