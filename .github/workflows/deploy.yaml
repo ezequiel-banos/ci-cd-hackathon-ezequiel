@@ -1,0 +1,19 @@
+name: deploy-to-ec2
+run-name: deploy-to-ec2
+on: 
+  push:
+    branches:
+      - master
+permissions:
+  contents: read
+jobs:
+  deploy-to-ec2:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install
+      - run: npm run build
+      - run: sudo PORT=80 $(which node) build &
