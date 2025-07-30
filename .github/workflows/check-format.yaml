@@ -1,6 +1,8 @@
 name: check-format-with-prettier
 run-name: check-format-with-prettier
 on: [pull_request]
+permissions:
+  contents: read
 jobs:
   check-format-with-prettier:
     runs-on: ubuntu-latest

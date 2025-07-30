@@ -4,6 +4,8 @@ on:
   pull_request:
   schedule:
     - cron: '19 21 * * *'
+permissions:
+  contents: read
 jobs:
   audit-packages:
     runs-on: ubuntu-latest

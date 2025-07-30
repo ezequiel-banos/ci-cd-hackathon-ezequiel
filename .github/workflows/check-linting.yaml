@@ -1,6 +1,8 @@
 name: check-linting-with-eslint
 run-name: check-linting-with-eslint
 on: [pull_request]
+permissions:
+  contents: read
 jobs:
   check-linting-with-eslint:
     runs-on: ubuntu-latest
